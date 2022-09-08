@@ -1,0 +1,16 @@
+const urlEncode = function (text) {
+  // Put your solution here
+  let answer = "";
+  text = text.trim();
+  for (let i = 0; i < text.length; i++) {
+    if (text[i] === " ") {
+      answer = answer + "%20";
+    } else {
+      answer = answer + text[i];
+    }
+  } return answer;
+};
+
+console.log(urlEncode("Lighthouse Labs"));
+console.log(urlEncode(" Lighthouse Labs "));
+console.log(urlEncode("blue is greener than purple for sure"));
